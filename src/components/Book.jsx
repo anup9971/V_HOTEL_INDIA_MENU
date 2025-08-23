@@ -4,13 +4,7 @@ import HTMLFlipBook from "react-pageflip";
 function Book() {
 
   const pokemonData = [
-    {
-      id: "006",
-      img:"/1.jpg",
-      name: "Charizard",
-      types: ["Fire", "Flying"],
-      description: "Flies in search of strong opponents. Breathes extremely hot fire that melts anything, but never uses it on weaker foes."
-    },
+    
     {
       img:"/2.jpg",
       id: "025",
@@ -103,6 +97,8 @@ function Book() {
   ];
 
   return (
+    <>
+    
     <HTMLFlipBook 
       width={370} 
       height={500}
@@ -111,11 +107,11 @@ function Book() {
       showCover={true}
       size='fixed'
     >
-      <div className="page" style={{ background: 'transparent', backgroundImage:"/bg.png" } }>
-        <div className="page-content cover">
-          <img src="/vIndia.png" alt="" />
+      <div className="page" style={{  backgroundPosition: "center",backgroundSize: "cover"  } }>
+          <img src="/1.jpg" alt="" className='page-content-img' />
+        {/* <div className="page-content cover">
          <h1 className='pokemon-logo'>Menu </h1>
-        </div>
+        </div> */}
       </div>
 
       {pokemonData.map((pokemon) => (
@@ -143,6 +139,7 @@ function Book() {
         </div>
       ))}
     </HTMLFlipBook>
+    </>
   );
 }
 
