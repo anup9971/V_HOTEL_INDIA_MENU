@@ -6,11 +6,13 @@ function Book() {
   const pokemonData = [
     {
       id: "006",
+      img:"/1.jpg",
       name: "Charizard",
       types: ["Fire", "Flying"],
       description: "Flies in search of strong opponents. Breathes extremely hot fire that melts anything, but never uses it on weaker foes."
     },
     {
+      img:"/2.jpg",
       id: "025",
       name: "Pikachu",
       types: ["Electric"],
@@ -18,24 +20,32 @@ function Book() {
     },
     {
       id: "125",
+      img:"/3.jpg",
+
       name: "Electabuzz",
       types: ["Electric"],
       description: "Often kept at power plants to regulate electricity. Competes with others to attract lightning during storms."
     },
     {
       id: "185",
+      img:"/4.jpg",
+
       name: "Sudowoodo",
       types: ["Rock"],
       description: "Despite looking like a tree, its body is more like rock. Hates water and hides when it rains."
     },
     {
       id: "448",
+      img:"/5.jpg",
+
       name: "Lucario",
       types: ["Fighting", "Steel"],
       description: "Can read thoughts and movements by sensing others' aura. No foe can hide from Lucario."
     },
     {
       id: "658",
+      img:"/6.jpg",
+
       name: "Greninja",
       types: ["Water", "Dark"],
       description: "Creates throwing stars from compressed water that can slice through metal when thrown at high speed."
@@ -43,9 +53,53 @@ function Book() {
     {
       id: "491",
       name: "Darkrai",
+      img:"/7.jpg",
+
       types: ["Dark"],
       description: "A legendary Pokémon that appears on moonless nights, putting people to sleep and giving them nightmares."
-    }
+    },
+     {
+      id: "491",
+      name: "Darkrai",
+      img:"/2.jpg",
+
+      types: ["Dark"],
+      description: "A legendary Pokémon that appears on moonless nights, putting people to sleep and giving them nightmares."
+    },
+     {
+      id: "491",
+      name: "Darkrai",
+      img:"/9.jpg",
+
+      types: ["Dark"],
+      description: "A legendary Pokémon that appears on moonless nights, putting people to sleep and giving them nightmares."
+    },
+     {
+      id: "491",
+      name: "Darkrai",
+      img:"/10.jpg",
+
+      types: ["Dark"],
+      description: "A legendary Pokémon that appears on moonless nights, putting people to sleep and giving them nightmares."
+    },
+     {
+      id: "491",
+      name: "Darkrai",
+      img:"/11.jpg",
+
+      types: ["Dark"],
+      description: "A legendary Pokémon that appears on moonless nights, putting people to sleep and giving them nightmares."
+    },
+     {
+      id: "491",
+      name: "Darkrai",
+      img:"/12.jpg",
+
+      types: ["Dark"],
+      description: "A legendary Pokémon that appears on moonless nights, putting people to sleep and giving them nightmares."
+    },
+
+
   ];
 
   return (
@@ -57,13 +111,10 @@ function Book() {
       showCover={true}
       size='fixed'
     >
-      <div className="page" style={{ background: 'transparent' }}>
+      <div className="page" style={{ background: 'transparent', backgroundImage:"/bg.png" } }>
         <div className="page-content cover">
-          <img 
-            src="https://upload.wikimedia.org/wikipedia/commons/9/98/International_Pok%C3%A9mon_logo.svg" 
-            alt="Pokémon Logo" 
-            className="pokemon-logo"
-          />
+          <img src="/vIndia.png" alt="" />
+         <h1 className='pokemon-logo'>Menu </h1>
         </div>
       </div>
 
@@ -72,10 +123,10 @@ function Book() {
           <div className="page-content">
             <div className="pokemon-container">
               <img 
-                src={`https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/${pokemon.id}.png`} 
+                src={pokemon.img} 
                 alt={pokemon.name} 
               />
-              <div className="pokemon-info">
+              {/* <div className="pokemon-info">
                 <h2 className="pokemon-name">{pokemon.name}</h2>
                 <p className="pokemon-number">#{pokemon.id}</p>
                 <div>
@@ -86,7 +137,7 @@ function Book() {
                   ))}
                 </div>
                 <p className="pokemon-description">{pokemon.description}</p>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
