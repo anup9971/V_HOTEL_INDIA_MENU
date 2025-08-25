@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import HTMLFlipBook from "react-pageflip";
 
 function Book() {
@@ -92,53 +92,53 @@ function Book() {
       types: ["Dark"],
       description: "A legendary Pokémon that appears on moonless nights, putting people to sleep and giving them nightmares."
     },
+    
 
 
   ];
+const audioRef = useRef(null);
 
+  const handleFlip = () => {
+    if (audioRef.current) {
+      audioRef.current.currentTime = 0; // reset sound if already playing
+      audioRef.current.play();
+    }
+  };
   return (
     <>
     
-    <HTMLFlipBook 
-      width={370} 
-      height={500}
-      maxShadowOpacity={0.5}
-      drawShadow={true}
-      showCover={true}
-      size='fixed'
-    >
-      <div className="page" style={{  backgroundPosition: "center",backgroundSize: "cover"  } }>
-          <img src="/1.jpg" alt="" className='page-content-img' />
-        {/* <div className="page-content cover">
-         <h1 className='pokemon-logo'>Menu </h1>
-        </div> */}
-      </div>
+       <audio ref={audioRef} src="/turn.mp3" preload="auto" />
 
-      {pokemonData.map((pokemon) => (
-        <div className="page" key={pokemon.id}>
-          <div className="page-content">
-            <div className="pokemon-container">
-              <img 
-                src={pokemon.img} 
-                alt={pokemon.name} 
-              />
-              {/* <div className="pokemon-info">
-                <h2 className="pokemon-name">{pokemon.name}</h2>
-                <p className="pokemon-number">#{pokemon.id}</p>
-                <div>
-                  {pokemon.types.map((type) => (
-                    <span key={type} className={`pokemon-type type-${type.toLowerCase()}`}>
-                      {type}
-                    </span>
-                  ))}
-                </div>
-                <p className="pokemon-description">{pokemon.description}</p>
-              </div> */}
+      <HTMLFlipBook
+        width={370}
+        height={500}
+        maxShadowOpacity={0.5}
+        drawShadow={true}
+        showCover={true}
+        size="fixed"
+        onFlip={handleFlip}   // 👈 Flip hone pr sound play karega
+      >
+        {/* Cover Page */}
+        <div
+          className="page"
+          style={{ backgroundPosition: "center", backgroundSize: "cover" }}
+        >
+          <img src="/1.jpg" alt="" className="page-content-img" />
+        </div>
+
+        {/* Pokemon Pages */}
+        {pokemonData.map((pokemon) => (
+          <div className="page" key={pokemon.id}>
+            <div className="page-content">
+              <div className="pokemon-container">
+                <img src={pokemon.img} alt={pokemon.name} />
+              </div>
             </div>
           </div>
-        </div>
-      ))}
-    </HTMLFlipBook>
+        ))}
+      </HTMLFlipBook>
+          
+      
     </>
   );
 }

@@ -11,7 +11,9 @@ body,
 html {
   height: 100dvh;
   width: 100dvw;
-  background: #0e1a26;
+    background-image: url("/bg-menu.png");
+  object-fit: contain;
+  /* background: #0e1a26; */
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -47,9 +49,64 @@ html {
   height: 150px;
   height: 70px;
 }
-/* Book component ke liye space, taki overlap na ho */
+
 .container > *:not(.hotelName) {
-  margin-top: 60px; /* heading ki height jitna gap */
+  margin-top: 60px; 
+}
+
+/* Desktop par normal ho jaye */
+@media (min-width: 768px) {
+  .hotelName h2 {
+    position: static;
+    background: transparent;
+    box-shadow: none;
+    z-index: auto;
+    font-size: 32px;
+  }
+  .hotelName h2 img{
+  height: 150px;
+  height: 170px;
+  }
+
+  /* Desktop par extra margin ki zarurat nahi */
+  .container > *:not(.hotelName) {
+    margin-top: 0;
+    padding-left: 85px;
+  }
+}
+
+
+
+/* ------------------------- Developed by ------------------------------ */
+.developed {
+  text-decoration: underline;
+  position: fixed;
+  top: 570px;
+  left: 0;
+   padding-right: 10px;
+  color: white;
+
+  width: 100%;
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+  z-index: 9999;
+  padding: 3px 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* thoda shadow for clarity */
+}
+.developed > span>a{
+  color:white;
+}
+.developed > span>a:hover{
+   color: rgb(252, 160, 56)
+}
+/* .hotelName h2 img{
+  height: 150px;
+  height: 70px;
+} */
+
+.container > *:not(.hotelName) {
+  margin-top: 60px; 
 }
 
 /* Desktop par normal ho jaye */
@@ -81,12 +138,8 @@ html {
 
 
 
-
-
-
-
-
 .container {
+
   width: 100%;
   height: 100%;
   display: flex;
