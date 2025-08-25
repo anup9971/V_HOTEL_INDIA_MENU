@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react'
 import HTMLFlipBook from "react-pageflip";
+import { PiGreaterThanLight } from "react-icons/pi";
+import { PiLessThanLight } from "react-icons/pi";
 
 function Book() {
 
@@ -97,6 +99,7 @@ function Book() {
 
   ];
 const audioRef = useRef(null);
+const bookRef = useRef(null);
 
   const handleFlip = () => {
     if (audioRef.current) {
@@ -104,12 +107,15 @@ const audioRef = useRef(null);
       audioRef.current.play();
     }
   };
+  const goNext = () => bookRef.current?.pageFlip().flipNext();
+const goPrev = () => bookRef.current?.pageFlip().flipPrev();
   return (
     <>
     
        <audio ref={audioRef} src="/turn.mp3" preload="auto" />
 
       <HTMLFlipBook
+      ref={bookRef}  
         width={370}
         height={500}
         maxShadowOpacity={0.5}
@@ -139,8 +145,15 @@ const audioRef = useRef(null);
             </div>
           </div>
         ))}
-      </HTMLFlipBook>
-          
+
+      </HTMLFlipBook  >
+      <span>
+      <  PiGreaterThanLight className='next-btn'  onClick={goNext}  />
+      </span>
+      <span> 
+      <PiLessThanLight className='prev-btn' onClick={goPrev} />
+      </span>
+       
       
     </>
   );
