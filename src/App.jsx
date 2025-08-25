@@ -14,9 +14,9 @@ function App() {
              
          </div>
         <Book />
-        <p className='developed'>Developed & Design By 
+        {/* <p className='developed'>Developed & Design By 
           <span  style={{paddingLeft:"10px", }}><a href="https://www.perfectconsultancy.co/" target="_blank" rel="noopener noreferrer" >P.G.C</a></span>
-        </p>
+        </p> */}
     </div>
     </>
   );

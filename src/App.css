@@ -78,7 +78,7 @@ html {
 
 
 /* ------------------------- Developed by ------------------------------ */
-.developed {
+/* .developed {
   text-decoration: underline;
   position: fixed;
   top: 570px;
@@ -92,43 +92,14 @@ html {
   font-weight: bold;
   z-index: 9999;
   padding: 3px 0;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* thoda shadow for clarity */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
 }
 .developed > span>a{
   color:white;
 }
 .developed > span>a:hover{
    color: rgb(252, 160, 56)
-}
-/* .hotelName h2 img{
-  height: 150px;
-  height: 70px;
 } */
-
-.container > *:not(.hotelName) {
-  margin-top: 60px; 
-}
-
-/* Desktop par normal ho jaye */
-@media (min-width: 768px) {
-  .hotelName h2 {
-    position: static;
-    background: transparent;
-    box-shadow: none;
-    z-index: auto;
-    font-size: 32px;
-  }
-  .hotelName h2 img{
-  height: 150px;
-  height: 170px;
-  }
-
-  /* Desktop par extra margin ki zarurat nahi */
-  .container > *:not(.hotelName) {
-    margin-top: 0;
-    padding-left: 85px;
-  }
-}
 
 
 

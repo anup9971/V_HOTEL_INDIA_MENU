@@ -87,7 +87,7 @@ function Book() {
      {
       id: "491",
       name: "Darkrai",
-      img:"/12.jpg",
+      img:"/121.jpg",
 
       types: ["Dark"],
       description: "A legendary Pokémon that appears on moonless nights, putting people to sleep and giving them nightmares."
@@ -132,6 +132,9 @@ const audioRef = useRef(null);
             <div className="page-content">
               <div className="pokemon-container">
                 <img src={pokemon.img} alt={pokemon.name} />
+                {/* {
+                  pokemonData.length ==11 ? <p>helr klwejrkwerjkwekraj</p>:""
+                } */}
               </div>
             </div>
           </div>
