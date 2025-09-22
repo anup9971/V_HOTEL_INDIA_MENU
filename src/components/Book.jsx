@@ -8,7 +8,7 @@ function Book() {
   const pokemonData = [
     
     {
-      img:"/2.jpg",
+      img:"/new-imges/2.jpg",
       id: "025",
       name: "Pikachu",
       types: ["Electric"],
@@ -16,7 +16,7 @@ function Book() {
     },
     {
       id: "125",
-      img:"/3.jpg",
+      img:"/new-imges/3.jpg",
 
       name: "Electabuzz",
       types: ["Electric"],
@@ -24,7 +24,7 @@ function Book() {
     },
     {
       id: "185",
-      img:"/4.jpg",
+      img:"/new-imges/4.jpg",
 
       name: "Sudowoodo",
       types: ["Rock"],
@@ -32,7 +32,7 @@ function Book() {
     },
     {
       id: "448",
-      img:"/5.jpg",
+      img:"/new-imges/5.jpg",
 
       name: "Lucario",
       types: ["Fighting", "Steel"],
@@ -40,7 +40,7 @@ function Book() {
     },
     {
       id: "658",
-      img:"/6.jpg",
+      img:"/new-imges/6.jpg",
 
       name: "Greninja",
       types: ["Water", "Dark"],
@@ -49,7 +49,7 @@ function Book() {
     {
       id: "491",
       name: "Darkrai",
-      img:"/7.jpg",
+      img:"/new-imges/7.jpg",
 
       types: ["Dark"],
       description: "A legendary Pokémon that appears on moonless nights, putting people to sleep and giving them nightmares."
@@ -57,7 +57,7 @@ function Book() {
      {
       id: "491",
       name: "Darkrai",
-      img:"/2.jpg",
+      img:"/new-imges/8.jpg",
 
       types: ["Dark"],
       description: "A legendary Pokémon that appears on moonless nights, putting people to sleep and giving them nightmares."
@@ -65,7 +65,7 @@ function Book() {
      {
       id: "491",
       name: "Darkrai",
-      img:"/9.jpg",
+      img:"/new-imges/9.jpg",
 
       types: ["Dark"],
       description: "A legendary Pokémon that appears on moonless nights, putting people to sleep and giving them nightmares."
@@ -73,7 +73,7 @@ function Book() {
      {
       id: "491",
       name: "Darkrai",
-      img:"/10.jpg",
+      img:"/new-imges/10.jpg",
 
       types: ["Dark"],
       description: "A legendary Pokémon that appears on moonless nights, putting people to sleep and giving them nightmares."
@@ -81,7 +81,7 @@ function Book() {
      {
       id: "491",
       name: "Darkrai",
-      img:"/11.jpg",
+      img:"/new-imges/11.jpg",
 
       types: ["Dark"],
       description: "A legendary Pokémon that appears on moonless nights, putting people to sleep and giving them nightmares."
@@ -89,7 +89,7 @@ function Book() {
      {
       id: "491",
       name: "Darkrai",
-      img:"/121.jpg",
+      img:"/new-imges/12.jpg",
 
       types: ["Dark"],
       description: "A legendary Pokémon that appears on moonless nights, putting people to sleep and giving them nightmares."
